@@ -75,24 +75,6 @@ class Board(QWidget):
 
         self.update()
 
-    def drawRectangles(self, qp):
-        pen = QPen(Qt.gray, 1, Qt.SolidLine)
-        qp.setPen(pen)
-        qp.drawRect(1,1,10,10)
-
-        col = QColor(0,0,0)
-        col.setNamedColor('#d4d4d4')
-        qp.setPen(col)
-
-        qp.setBrush(QColor(200, 0,0))
-        qp.drawRect(10,15,90,60)
-
-        qp.setBrush(QColor(25, 0, 90, 200))
-        qp.drawRect(130,15,90,60)
-
-        qp.setBrush(QColor(25, 80, 90, 200))
-        qp.drawRect(250,15,90,60)
-
     def mousePressEvent(self, e):
         if(self.pressEventEnabled):
             x = (e.x() - self.offset)/self.size
